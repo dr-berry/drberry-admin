@@ -1,37 +1,20 @@
-import { useDashboard } from "@/client/sample/dashboard";
 import { getDefaultLayout, IDefaultLayoutPage, IPageHeader } from "@/components/layout/default-layout";
-import CalendarSample from "@/components/page/index/calendar-sample";
-import StatisticSample from "@/components/page/index/statistic-sample";
-import { useAuth } from "@/lib/auth/auth-provider";
-import { Alert, Divider, Skeleton } from "antd";
+import UserList from "@/components/page/user/user-list";
+import UserSearch from "@/components/page/user/user-search";
+import { useState } from "react";
 
 const pageHeader: IPageHeader = {
-  title: "Welcome",
+  title: "Dr.berry User 리스트",
 };
 
 const IndexPage: IDefaultLayoutPage = () => {
-  const { session } = useAuth();
-  const { data, error } = useDashboard();
+  const [searchText, setSearchText] = useState("");
+  const [type, setType] = useState("name");
 
   return (
     <>
-      <h2 className="title">👋 {session.user.name || "관리자"}님 안녕하세요!</h2>
-
-      <div className="my-5">
-        {data ? (
-          <StatisticSample data={data} />
-        ) : error ? (
-          <Alert message="대시보드 API 호출 중 오류가 발생했습니다." type="warning" />
-        ) : (
-          <Skeleton />
-        )}
-      </div>
-
-      <Divider />
-
-      <h3 className="title">달력</h3>
-
-      <CalendarSample />
+      <UserSearch searchText={searchText} setSearchText={setSearchText} type={type} setType={setType} />
+      <UserList searchText={searchText} type={type} />
     </>
   );
 };

@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.16.1",
+    "@types/axios": "^0.14.0",
     "@uiw/react-codemirror": "^4.21.9",
     "antd": "^5.7.3",
+    "axios": "^1.6.2",
     "dayjs": "^1.11.9",
     "framer-motion": "^10.15.0",
     "ky": "^0.33.3",

@@ -11,7 +11,7 @@ const LoginPage = () => {
         <img src="/logo.png" className="absolute w-10 h-10 top-5 left-5" alt="logo" />
         <div className="absolute inline-flex items-center gap-1 px-3 py-2 font-semibold text-white border-2 border-white rounded-lg left-5 bottom-5">
           <Verified width={18} height={18} />
-          PURPLE ADMIN UI
+          Dr.berry 어드민 시스템
         </div>
       </div>
 
@@ -39,7 +39,7 @@ const LoginPage = () => {
               />
             ) : null}
             <div className="flex flex-col items-center justify-center px-2 mt-8 sm:mt-0">
-              <h2 className="mt-2 text-5xl font-bold leading-tight inter">AWESOME</h2>
+              <h2 className="mt-2 text-5xl font-bold leading-tight inter">Dr.Berry</h2>
               <div className="mt-1 text-lg text-gray-400">Admin System</div>
             </div>
 

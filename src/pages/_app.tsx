@@ -38,9 +38,9 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
       <ConfigProvider
         theme={{
           token: {
-            colorPrimary: "#63489a",
-            colorLink: "#63489a",
-            colorLinkHover: "#7f68a6",
+            colorPrimary: "#379A41",
+            colorLink: "#39C270",
+            colorLinkHover: "#EAF8E0",
           },
         }}
         locale={koKR}

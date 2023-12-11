@@ -13,12 +13,16 @@ const credentialsProviderOption: CredentialsConfig<{}> = {
     password: { label: "Password", type: "password" },
   },
   async authorize(credentials: Record<string, unknown> | undefined) {
-    if (credentials && credentials.username === "admin" && credentials.password === "admin") {
+    if (
+      credentials &&
+      credentials.username === "drberry@greenberry.site" &&
+      credentials.password === "greenberry0407"
+    ) {
       return {
         id: "1",
-        login: "admin",
+        login: "Drberry",
         name: "관리자",
-        email: "",
+        email: "drberry@greenberry.site",
         image: "",
       };
     }
